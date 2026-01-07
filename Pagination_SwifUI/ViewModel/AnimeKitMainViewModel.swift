@@ -40,4 +40,13 @@ class AnimeKitMainViewModel: ObservableObject {
             await loadAnimes()
         }
     }
+    
+    /// 새로고침
+    func refresh () async {
+        page = 1
+        lastVisiblePage = -1
+        animes.removeAll()
+        
+        await loadAnimes()
+    }
 }

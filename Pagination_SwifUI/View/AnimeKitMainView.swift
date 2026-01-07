@@ -35,6 +35,11 @@ struct AnimeKitMainView: View {
                 await viewModel.loadAnimes()
             }
         }
+        .refreshable {
+            Task {
+                await viewModel.refresh()
+            }
+        }
     }
 }
 
