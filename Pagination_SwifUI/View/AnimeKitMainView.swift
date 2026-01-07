@@ -25,6 +25,11 @@ struct AnimeKitMainView: View {
             .navigationTitle("Top Animes")
             .padding()
         }
+        .onAppear {
+            Task {
+                await viewModel.loadAnimes()
+            }
+        }
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct Pagination_SwifUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AnimeKitMainView()
         }
     }
 }
