@@ -26,6 +26,19 @@ struct Anime: Identifiable, Decodable, Equatable {
         case rank = "rank"
         case score = "score"
     }
+    
+    static let sampleData = Anime(id: 52991,
+                                  url: "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
+                                  image: AnimeImage(jpg: ImageDetails(imageUrl:  "https://cdn.myanimelist.net/images/anime/1015/138006.jpg",
+                                                                      smallImageUrl: "https://cdn.myanimelist.net/images/anime/1015/138006t.jpg",
+                                                                      largeImageUrl: "https://cdn.myanimelist.net/images/anime/1015/138006l.jpg"),
+                                                    webp: ImageDetails(imageUrl: "https://cdn.myanimelist.net/images/anime/1015/138006.webp",
+                                                                       smallImageUrl: "https://cdn.myanimelist.net/images/anime/1015/138006t.webp",
+                                                                       largeImageUrl: "https://cdn.myanimelist.net/images/anime/1015/138006l.webp")),
+                                  title: "Sousou no Frieren",
+                                  episodes: 28,
+                                  rank: 1,
+                                  score: 9.12)
 }
 
 
