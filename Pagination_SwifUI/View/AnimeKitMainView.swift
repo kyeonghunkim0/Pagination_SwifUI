@@ -18,6 +18,11 @@ struct AnimeKitMainView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.animes) { anime in
                         AnimeCard(anime: anime)
+                            .onAppear {
+                                Task {
+                                    await viewModel.shouldLoadPagination(id: anime.id)
+                                }
+                            }
                             .padding(.bottom)
                     }
                 }
