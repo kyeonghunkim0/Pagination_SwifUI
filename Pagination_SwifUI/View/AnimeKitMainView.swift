@@ -17,10 +17,13 @@ struct AnimeKitMainView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.animes) { anime in
-                        // TODO: AnimeCard 추가
+                        AnimeCard(anime: anime)
+                            .padding(.bottom)
                     }
                 }
             }
+            .navigationTitle("Top Animes")
+            .padding()
         }
     }
 }
